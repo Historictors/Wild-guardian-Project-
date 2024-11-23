@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Poppins, sans-serif;
+}
+body{
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+.front, .section{
+        overflow: hidden;
+        height: 85vh;
+        width: 85%;
+        background-color: rgba(255, 255, 255, 0.2);
+        margin: 3em auto;
+        border-radius: 40px;
+        box-shadow: 0 0 6px inset white;
+        border: 1px solid whitesmoke;
+        backdrop-filter: blur(8px);
+        position: relative;
+}
+#section .front::before{
+        z-index: 0;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent 50%,rgb(0, 0, 0));
+}
+.navbar{
+    padding: 30px 0 30px 30px;
+    color: white;
+    margin: 0 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.right-nav{
+    width: 55%;
+        display: flex;
+        justify-content: space-between;
+}
+.right-nav{
+            font-weight: 550;
+            text-shadow: 0 0 0 rgb(0, 0, 0);
+}
+.nav-info{
+        cursor: pointer;
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        position: relative;     
+}
+.nav-info::after{
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 80%;
+                    background-color: #fff;
+                    margin-bottom: -7px;
+                    box-shadow: 0 0 5px white;
+                    transform: scale(0);
+                    transform-origin: left;                   
+}
+.nav-info:hover::after{
+                        transform: scale(1);
+                        transition-property: transform;
+                        transition-duration: 0.3s;
+                        transition-timing-function: ease-in-out;
+}
+.info-green:hover::after{
+    background-color: rgb(0, 255, 0);
+    box-shadow: 0 0 5px rgb(0, 255, 0);
+}
+.logo-green{
+        color: rgb(0, 255, 0);
+}
+.logo-nav{
+            font-size: 1.8em;
+            font-weight: 600;      
+            letter-spacing: 2px;
+}
+.front-main{
+            height: 50vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+}
+.subheading-front{
+                    font-size: 1.7em;
+                    color: white;
+                    font-weight: 400;
+                    letter-spacing: 50px;
+                    margin-bottom: -15px;
+}
+.heading-front{
+
+                font-size: 5em;
+                font-weight: 800;
+                color: white;           
+                letter-spacing: 20px;    
+                margin-top: 6px;     
+                z-index: -2; 
+}
+.image{
+    width: 45%;
+    margin-top: -145px;
+    z-index: -1;
+    animation: earth 100s linear infinite;
+}
+
+.main-button{
+               margin-top: -150px;
+               margin-left: auto;
+               margin-right: auto;
+               z-index: 1;
+               text-align: center;
+               padding: 10px;
+               background-color: transparent;
+               padding-left: 40px;
+               padding-right: 40px;
+               border-radius: 30px;
+               border: 1px solid white;
+              font-weight: 600;               
+}
+.main-button:hover{
+    background-color: white;
+    color: black;
+}
+.lion{  
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: white;
+            justify-content: center;         
+}
+.lion-info{
+            align-self: center;
+           margin-left: 30px;         
+}
+.lion-title{
+            font-size: 1.6rem;
+            color: rgb(0, 255, 0);
+            font-weight: 600;
+            animation: lion-title 1.5s cubic-bezier(.68,-0.55,.27,1.55)  1 forwards;
+            transform: translateY(500px);          
+}
+.lion-heading{
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-transform: capitalize;
+    animation: lion-heading 1.5s cubic-bezier(.68,-0.55,.27,1.55)  0.1s 1 forwards;
+    transform: translateY(500px); 
+}
+.lion-detail{
+    line-height: 1.5;
+    font-size: 1.1em;
+     animation: lion-detail 1.5s cubic-bezier(.68,-0.55,.27,1.55) 0.2s 1 forwards;
+            transform: translateY(500px);  
+}
+.button{
+    border: none;
+    border-radius: 10em;
+    background-color: rgb(0, 255, 0);
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px auto 0 auto;
+    min-width: 25%;
+    min-height: 7vh;
+    animation: button 1.5s ease-in-out 0.7s 1 forwards;
+}
+.button:hover{
+    background-color: black;
+    color: rgb(0, 255, 0);
+    transition-property:  background-color ,color ;
+    transition-duration: 5ms;
+    transition-timing-function: ease-in-out;
+}
+.imag{
+    margin: 50px;
+}
+.elephant-para{
+    animation: elephant-para 0.9s ease-in-out 0.7s 1 forwards;
+    transform: translateY(500px);  
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.form-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+}
+.form-input{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem; 
+    animation: form-input 1.5s cubic-bezier(.68,-0.55,.27,1.55)  0.1s 1 forwards;
+}
+.form-area{
+    min-width: 32em;
+    background-color:rgba(255, 255, 255, 0);
+    border: 0.5px solid white;
+    padding: 1em;
+    border-radius: 40px;
+}
+.form-area::placeholder{
+                        font-size: 1rem;
+}
+.membership{
+    width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.checkbox{
+        border: 2px solid green;
+        margin: 10px 20px 0 20px;
+        cursor: pointer;
+}
+.animal{
+    animation: animal 1.s cubic-bezier(.68,-0.55,.27,1.55)  1s 1 forwards;
+}
+/* Animations */
+
+@keyframes earth {
+    from{
+
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+@keyframes animal {
+    from{
+        transform: scale(0%);    
+    }
+    to{
+        transform: scale(100%);    
+    }
+}
+@keyframes lion-title {
+    from{
+        transform: translateY(500px);    
+    }
+    to{
+        transform: translateY(0px);    
+    }
+}
+
+@keyframes lion-heading{
+    from{
+        transform: translateY(500px);    
+    }
+    to{
+        transform: translateY(0px);    
+    }
+}
+
+@keyframes lion-detail {
+    from{
+        transform: translateY(500px);    
+    }
+    to{
+        transform: translateY(0px);    
+    }
+}
+
+
+@keyframes button {
+    from{
+        transform: translateY(500px);    
+    }
+    to{
+        transform: translateY(0px);    
+    }
+}
+
+@keyframes elephant-para {
+    from{
+        transform: translateX(500px);    
+    }
+    to{
+        transform: translateX(0px);    
+    }
+}
+
+@keyframes form-input{
+    from{
+        transform: scale(0%);    
+    }
+    to{
+        transform: scale(100%);    
+    }
+}
+@keyframes lion-title {
+    from{ transform: translateY(500px);}
+    to{transform: translateY(0px);}
+}
